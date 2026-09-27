@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rudraksh Shekhar — AI / Web Developer</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#070707;color:#f3f0e8;font-family:"Times New Roman",Times,serif;line-height:1.45}a{color:inherit;text-decoration:none}
+:root{--bg:#070707;--panel:#101010;--line:#2a2a2a;--muted:#aaa69d;--white:#f4f0e8;--accent:#b9ff52;--accent2:#8e6cff}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 10%,rgba(185,255,82,.08),transparent 28%),radial-gradient(circle at 90% 70%,rgba(142,108,255,.08),transparent 28%);z-index:-1}
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1120px,92%);z-index:20;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border:1px solid #292929;border-radius:999px;background:rgba(8,8,8,.72);backdrop-filter:blur(16px)}
+.logo{font-weight:bold;letter-spacing:1px}.navlinks{display:flex;gap:22px;font-size:14px;color:#c9c5bc}.navlinks a:hover{color:var(--accent)}
+section{width:min(1120px,92%);margin:auto;padding:100px 0}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:120px}
+.hero-inner{width:100%;max-width:850px;text-align:left}
+.kicker{color:var(--accent);font-size:14px;letter-spacing:4px;text-transform:uppercase}.hero h1{font-size:clamp(48px,7.5vw,94px);line-height:.86;margin:22px 0 20px;letter-spacing:-4px;text-shadow:0 0 0 #000,-2px -2px 0 #111,2px 2px 0 #111}
+.hero h1 span{background:linear-gradient(90deg,var(--white),var(--accent),#fff);-webkit-background-clip:text;color:transparent}.hero p{max-width:720px;margin:0;color:#b9b5ad;font-size:18px}
+.hero-meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;color:#8f8b83;font-size:11px;letter-spacing:1.5px}
+.hero-meta span{border-left:1px solid #333;padding-left:10px}.hero-meta i{display:inline-block;width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 12px var(--accent);margin-right:7px}.hero-actions{margin-top:28px;display:flex;justify-content:flex-start;gap:12px;flex-wrap:wrap}.btn{padding:13px 20px;border:1px solid #393939;border-radius:999px;background:#111}.btn.primary{background:var(--accent);color:#050505;border-color:var(--accent);font-weight:bold}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(185,255,82,.13)}
+.stats-strip{width:min(1120px,92%);margin:-30px auto 0;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #292929;border-radius:18px;overflow:hidden;background:#0c0c0c}
+.stats-strip div{padding:20px;border-right:1px solid #292929;transition:.3s}.stats-strip div:last-child{border-right:0}.stats-strip div:hover{background:linear-gradient(135deg,#151515,#101010);transform:translateY(-3px)}
+.stats-strip strong{display:block;font-size:28px;color:var(--accent)}.stats-strip span{font-size:10px;letter-spacing:1.5px;color:#777}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:32px;border-bottom:1px solid var(--line);padding-bottom:18px}.section-head h2{font-size:48px;margin:0}.num{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{position:relative;overflow:hidden;background:linear-gradient(145deg,#111,#0a0a0a);border:1px solid #292929;border-radius:22px;padding:26px;min-height:190px;transition:.35s}.card:after{content:"";position:absolute;width:140px;height:140px;right:-70px;top:-70px;background:var(--accent);filter:blur(55px);opacity:0;transition:.35s}.card:hover{transform:translateY(-8px);border-color:#555;box-shadow:0 22px 70px rgba(0,0,0,.5)}.card:hover:after{opacity:.18}.card h3{font-size:25px;margin:0 0 10px}.card p{color:var(--muted);margin:0}.tag{display:inline-block;font-size:12px;border:1px solid #383838;border-radius:999px;padding:5px 9px;margin:5px 4px 0 0;color:#d7d3ca}
+.about{display:grid;grid-template-columns:1fr 1.3fr;gap:35px}.bigcopy{font-size:28px}.muted{color:var(--muted)}
+.project{grid-column:span 3;min-height:330px}.project h3{font-size:40px}.project .stack{color:var(--accent);font-size:14px;letter-spacing:1px}.project .project-body{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.timeline{border-left:1px solid #333;margin-left:10px}.item{padding:0 0 25px 28px;position:relative}.item:before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}.item h3{margin:0}.item p{margin:4px 0;color:var(--muted)}
+.quote{padding:65px 0;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:clamp(32px,5vw,65px);line-height:1.05}.quote span{color:var(--accent)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:16px}.contact .card{min-height:150px}footer{padding:35px 4%;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#8e8a82;font-size:14px}
+.reveal{animation:rise .8s both}.d2{animation-delay:.12s}.d3{animation-delay:.24s}@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media(max-width:800px){.stats-strip{grid-template-columns:1fr 1fr}.stats-strip div:nth-child(2){border-right:0}.stats-strip div:nth-child(-n+2){border-bottom:1px solid #292929}.navlinks{display:none}.grid{grid-template-columns:1fr}.project{grid-column:auto}.project .project-body,.about,.contact{grid-template-columns:1fr}.hero h1{letter-spacing:-3px}.section-head h2{font-size:36px}}
+.nav-cta{background:var(--accent)!important;color:#050505!important;font-weight:bold;padding:8px 15px!important}.nav-cta:hover{box-shadow:0 0 25px rgba(185,255,82,.25)!important;transform:translateY(-2px)!important}
+.hero-trust{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.hero-trust span{font-size:10px;letter-spacing:1.8px;padding:6px 9px;border:1px solid #303030;border-radius:999px;color:#888}.hero-trust span:first-child{color:var(--accent);border-color:#42532d}
+.service-card{min-height:240px;display:flex;flex-direction:column}.service-no{color:var(--accent);font-size:12px;letter-spacing:2px}.service-card a{margin-top:auto;color:var(--accent);font-size:14px}.service-card:hover a{text-decoration:underline}
+.work-gallery{display:grid;grid-template-columns:1.5fr 1fr;gap:16px}.work-tile{min-height:260px;border:1px solid #292929;border-radius:22px;overflow:hidden;position:relative;background:#0d0d0d;transition:.35s}.work-tile:hover{transform:translateY(-7px);border-color:#505050;box-shadow:0 25px 70px rgba(0,0,0,.45)}.work-tile:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(185,255,82,.18),transparent 35%),linear-gradient(135deg,#141414,#080808)}.work-tile.featured{grid-row:span 2;min-height:536px}.work-overlay,.work-tile>div{position:absolute;inset:auto 26px 26px 26px;z-index:1}.work-tile span{color:var(--accent);font-size:11px;letter-spacing:2px}.work-tile h3{font-size:32px;margin:8px 0}.work-tile p{color:#aaa}.work-tile a{color:var(--white);border-bottom:1px solid var(--accent)}.work-tile.visual:before{background:radial-gradient(circle at 25% 25%,rgba(142,108,255,.25),transparent 38%),linear-gradient(135deg,#151219,#090909)}.work-tile.prompt:before{background:radial-gradient(circle at 80% 20%,rgba(185,255,82,.18),transparent 38%),linear-gradient(135deg,#12150d,#080808)}.gallery-note{color:#777;font-size:13px;margin-top:14px}
+.hire-section{padding-top:60px}.hire-inner{border:1px solid #343434;border-radius:28px;padding:55px;background:linear-gradient(135deg,#111,#090909);position:relative;overflow:hidden}.hire-inner:after{content:"";position:absolute;width:280px;height:280px;right:-80px;top:-110px;background:var(--accent);filter:blur(100px);opacity:.12}.hire-inner h2{font-size:clamp(42px,6vw,75px);line-height:.95;margin:18px 0}.hire-inner p{max-width:620px;color:#aaa;font-size:18px}
+@media(max-width:800px){.work-gallery{grid-template-columns:1fr}.work-tile.featured{grid-row:auto;min-height:330px}.hire-inner{padding:35px 25px}}
+</style>
+</head>
+<body>
+<nav><a class="logo" href="#top">RUDRAKSH SHEKHAR</a><div class="navlinks"><a href="#about">About</a><a href="#portfolio">Work</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#contact">Contact</a><a class="nav-cta" href="#hire">Hire Me</a></div></nav>
+
+<main id="top">
+<section class="hero">
+<div class="hero-inner">
+<div class="kicker reveal">AI / WEB DEVELOPER · CREATIVE TECHNOLOGIST</div>
+<h1 class="reveal d2">RUDRAKSH<br><span>SHEKHAR</span></h1>
+<p class="reveal d3">First-year B.Tech CSE student at Lucknow University building with AI, web technologies and visual design — available for internships, freelance projects and entry-level opportunities.</p>
+<div class="hero-meta reveal d3">
+<span><i></i> AVAILABLE FOR INTERNSHIPS</span>
+<span>AI · WEB · DESIGN</span>
+<span>LUCKNOW, INDIA</span>
+</div>
+<div class="hero-actions reveal d3"><a class="btn primary" href="#hire">Hire Me →</a><a class="btn" href="#portfolio">View Work</a></div><div class="hero-trust reveal d3"><span>AI</span><span>WEB</span><span>DESIGN</span><span>FAST ITERATION</span></div>
+</div>
+</section>
+<div class="stats-strip">
+<div><strong>01</strong><span>AI PROJECT</span></div>
+<div><strong>06+</strong><span>CORE SKILL AREAS</span></div>
+<div><strong>04</strong><span>FREELANCE SERVICES</span></div>
+<div><strong>∞</strong><span>BUILD / LEARN / SHIP</span></div>
+</div>
+
+<section id="about">
+<div class="section-head"><h2>About</h2><span class="num">01 / PROFILE</span></div>
+<div class="about">
+<div class="bigcopy">I build practical digital experiences where <span style="color:var(--accent)">AI, web development and design</span> meet.</div>
+<div class="muted">I am a first-year B.Tech Computer Science and Engineering student at Lucknow University. My current foundation includes HTML, CSS and JavaScript, with growing focus on full-stack web development and Java. I also offer AI prompt engineering, AI-assisted website creation, presentations, posters and thumbnails.</div>
+</div>
+</section>
+
+<div class="quote">BUILD WITH PURPOSE.<br><span>SHIP WITH PRECISION.</span></div>
+
+<section id="work">
+<div class="section-head"><h2>Featured Work</h2><span class="num">02 / PROJECT</span></div>
+<div class="grid">
+<div class="card project">
+<div class="stack">SMART INDIA HACKATHON · FULL-STACK AI</div>
+<h3>Patient Case AI</h3>
+<div class="project-body"><p class="muted">A full-stack AI healthcare web application where patients register, complete a case-taking questionnaire with voice input and upload medical documents. Gemini extracts information and generates structured clinical summaries for doctors to review, edit and confirm.</p><div><span class="tag">Next.js / React</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Supabase</span><span class="tag">Google Gemini API</span><span class="tag">Vercel</span><p style="margin-top:25px"><a class="btn primary" href="https://patient-case-ai.vercel.app" target="_blank">Live Demo ↗</a> <a class="btn" href="https://github.com/rudrakshshekhar77/patient-case-ai" target="_blank">GitHub ↗</a></p></div></div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-head"><h2>Skills</h2><span class="num">03 / STACK</span></div>
+<div class="grid">
+<div class="card"><h3>Web & Programming</h3><p>HTML · CSS · JavaScript · Java (learning)</p></div>
+<div class="card"><h3>Development</h3><p>Full-stack web development · AI-assisted website creation · Supabase Database & Auth · Vercel deployment</p></div>
+<div class="card"><h3>AI</h3><p>Prompt Engineering · ChatGPT · Google Gemini API · Chatbot Development Support</p></div>
+<div class="card"><h3>Design</h3><p>Canva · Poster Design · PowerPoint Design · Thumbnail Design</p></div>
+<div class="card"><h3>Tools</h3><p>VS Code · GitHub · Google Workspace</p></div>
+<div class="card"><h3>Other</h3><p>Script Writing</p></div>
+</div>
+</section>
+
+<section id="services">
+<div class="section-head"><h2>What I Do</h2><span class="num">04 / SERVICES</span></div>
+<div class="grid">
+<div class="card"><h3>01 — AI Prompt Engineering</h3><p>Write and refine prompts for useful, accurate outputs across content, ideas and chatbot use cases.</p></div>
+<div class="card"><h3>02 — AI Websites</h3><p>Build websites with HTML, CSS and JavaScript while using AI tools to accelerate design and development.</p></div>
+<div class="card"><h3>03 — PPT & Visual Design</h3><p>Create professional PowerPoint presentations, posters and thumbnails with clean visual direction.</p></div>
+<div class="card"><h3>04 — Scripts & Chatbots</h3><p>Support scripts, conversation flows and prompt setup for chatbot-related work.</p></div>
+</div>
+</section>
+
+<div class="quote">LESS TALK.<br><span>MORE OUTPUT.</span></div>
+
+<section>
+<div class="section-head"><h2>Journey</h2><span class="num">05 / EDUCATION</span></div>
+<div class="timeline">
+<div class="item"><h3>B.Tech — Computer Science & Engineering</h3><p>Lucknow University · First Year · Ongoing</p></div>
+<div class="item"><h3>Smart India Hackathon Team Project</h3><p>Patient Case AI · Full-stack AI healthcare application</p></div>
+<div class="item"><h3>Currently Learning</h3><p>Full-stack web development · Java · JavaScript · HTML · CSS</p></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="section-head"><h2>Let's Work</h2><span class="num">06 / CONTACT</span></div>
+<div class="contact">
+<a class="card" href="mailto:rudrakshshekhar4@gmail.com"><h3>Email</h3><p>rudrakshshekhar4@gmail.com</p></a>
+<a class="card" href="tel:9519940700"><h3>Phone</h3><p>+91 9519940700</p></a>
+<a class="card" href="https://github.com/rudrakshshekhar77" target="_blank"><h3>GitHub</h3><p>github.com/rudrakshshekhar77</p></a>
+<div class="card"><h3>Open To</h3><p>Internships · Freelance Projects · Entry-Level Opportunities</p></div>
+</div>
+</section>
+</main>
+<footer><span>© 2026 Rudraksh Shekhar</span><span>AI · WEB · DESIGN</span></footer>
+<script>
+document.querySelectorAll('.card').forEach(card=>{
+ card.addEventListener('mousemove',e=>{
+   const r=card.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+   card.style.transform=`perspective(700px) rotateX(${-y*3}deg) rotateY(${x*3}deg) translateY(-6px)`;
+ });
+ card.addEventListener('mouseleave',()=>card.style.transform='');
+});
+</script></body></html>
