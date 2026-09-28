@@ -35,10 +35,13 @@ section{width:min(1120px,92%);margin:auto;padding:100px 0}
 .work-gallery{display:grid;grid-template-columns:1.5fr 1fr;gap:16px}.work-tile{min-height:260px;border:1px solid #292929;border-radius:22px;overflow:hidden;position:relative;background:#0d0d0d;transition:.35s}.work-tile:hover{transform:translateY(-7px);border-color:#505050;box-shadow:0 25px 70px rgba(0,0,0,.45)}.work-tile:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(185,255,82,.18),transparent 35%),linear-gradient(135deg,#141414,#080808)}.work-tile.featured{grid-row:span 2;min-height:536px}.work-overlay,.work-tile>div{position:absolute;inset:auto 26px 26px 26px;z-index:1}.work-tile span{color:var(--accent);font-size:11px;letter-spacing:2px}.work-tile h3{font-size:32px;margin:8px 0}.work-tile p{color:#aaa}.work-tile a{color:var(--white);border-bottom:1px solid var(--accent)}.work-tile.visual:before{background:radial-gradient(circle at 25% 25%,rgba(142,108,255,.25),transparent 38%),linear-gradient(135deg,#151219,#090909)}.work-tile.prompt:before{background:radial-gradient(circle at 80% 20%,rgba(185,255,82,.18),transparent 38%),linear-gradient(135deg,#12150d,#080808)}.gallery-note{color:#777;font-size:13px;margin-top:14px}
 .hire-section{padding-top:60px}.hire-inner{border:1px solid #343434;border-radius:28px;padding:55px;background:linear-gradient(135deg,#111,#090909);position:relative;overflow:hidden}.hire-inner:after{content:"";position:absolute;width:280px;height:280px;right:-80px;top:-110px;background:var(--accent);filter:blur(100px);opacity:.12}.hire-inner h2{font-size:clamp(42px,6vw,75px);line-height:.95;margin:18px 0}.hire-inner p{max-width:620px;color:#aaa;font-size:18px}
 @media(max-width:800px){.work-gallery{grid-template-columns:1fr}.work-tile.featured{grid-row:auto;min-height:330px}.hire-inner{padding:35px 25px}}
+html {
+    scroll-behavior: smooth;
+}
 </style>
 </head>
 <body>
-<nav><a class="logo" href="#top">RUDRAKSH SHEKHAR</a><div class="navlinks"><a href="#about">About</a><a href="#portfolio">Work</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#contact">Contact</a><a class="nav-cta" href="#hire">Hire Me</a></div></nav>
+<nav><a class="logo" href="#top">RUDRAKSH SHEKHAR</a><div class="navlinks"><a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#contact">Contact</a><a class="nav-cta" href="#hire">Hire Me</a></div></nav>
 
 <main id="top">
 <section class="hero">
